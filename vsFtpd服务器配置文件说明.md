@@ -1,4 +1,4 @@
-#文件服务器
+# 文件服务器
 
 ## 1 vsftpd 文件服务器
 ###（1）配置文件说明
@@ -59,7 +59,7 @@ listen_address=IP地址 // 设置FTP服务器在指定的IP地址上侦听用户
 
 setproctitle_enable=YES/NO（NO） // 设置每个与FTP服务器的连接，是否以不同的进程表现出来。默认值为NO，此时使用ps aux |grep ftp只会有一个vsftpd的进程。若设置为YES，则每个连接都会有一个vsftpd的进程。  
 
-** (7) 虚拟用户设置 **  
+**(7) 虚拟用户设置**  
 pam_service_name=vsftpd // pam 认证方式与/etc/pam/vsftpd对应  
 guest_enable= YES/NO（NO）// 虚拟用户模式开启  
 guest_username=ftp // 虚拟用户的宿主用户（本地用户）  
