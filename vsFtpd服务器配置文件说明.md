@@ -4,26 +4,26 @@
 ###（1）配置文件说明
 
 **vsftpd.conf**
- Example config file /etc/vsftpd/vsftpd.conf
-**（1）默认配置**
-anonymous_enable=NO //是否开启匿名访问
-local_enable=YES // 本地用户访问开启YES，本地用户（linux中的系统用户）
-write_enable=YES //是否登录用户对FTP服务文件具有写权限，属于全局设置
-**（2）匿名用户设置**
-anon_upload_enable=YES //匿名用户上传权限开启
-anon_mkdir_write_enable=YES //是否允许匿名用户创建目录
-no_anon_password=YES/NO（NO）// 匿名用户登录不需要密码
-ftp_username=ftp //匿名用户登录时用户，默认为ftp 家目录为/var/ftp
-anon_root=/var/ftp //匿名用户登录进去默认的家目录
+ Example config file /etc/vsftpd/vsftpd.conf  
+**（1）默认配置**  
+anonymous_enable=NO //是否开启匿名访问  
+local_enable=YES // 本地用户访问开启YES，本地用户（linux中的系统用户）  
+write_enable=YES //是否登录用户对FTP服务文件具有写权限，属于全局设置  
+**（2）匿名用户设置**  
+anon_upload_enable=YES //匿名用户上传权限开启  
+anon_mkdir_write_enable=YES //是否允许匿名用户创建目录  
+no_anon_password=YES/NO（NO）// 匿名用户登录不需要密码  
+ftp_username=ftp //匿名用户登录时用户，默认为ftp 家目录为/var/ftp  
+anon_root=/var/ftp //匿名用户登录进去默认的家目录  
 anon_world_readable_only=YES/NO（YES）//如果设置为YES,匿名用户可以下载文件，在本机上可以阅读，但是不能在FTP服务器上阅读。
-anon_other_write_enable=YES/NO（NO）//如果设为YES，则允许匿名登入者更多于上传或者建立目录之外的权限，譬如删除或者重命名。（如果 anon_upload_enable=NO，则匿名用户不能上传文件，但可以删除或者重命名已经存在的文件；如果 anon_mkdir_write_enable=NO，则匿名用户不能上传或者新建文件夹，但可以删除或者重命名已经存在的文件夹。）默认值为NO。
-chown_uploads=YES/NO（NO）//设置是否改变匿名用户上传文件（非目录）的属主
-chown_username=username //设置匿名用户上传文件（非目录）的属主名。建议不要设置为root
-anon_umask=077 // 设置匿名登入者新增或上传档案时的umask 值。默认值为077，则新建档案的对应权限为700。
+anon_other_write_enable=YES/NO（NO）//如果设为YES，则允许匿名登入者更多于上传或者建立目录之外的权限，譬如删除或者重命名。（如果 anon_upload_enable=NO，则匿名用户不能上传文件，但可以删除或者重命名已经存在的文件；如果 anon_mkdir_write_enable=NO，则匿名用户不能上传或者新建文件夹，但可以删除或者重命名已经存在的文件夹。）默认值为NO。  
+chown_uploads=YES/NO（NO）//设置是否改变匿名用户上传文件（非目录）的属主  
+chown_username=username //设置匿名用户上传文件（非目录）的属主名。建议不要设置为root  
+anon_umask=077 // 设置匿名登入者新增或上传档案时的umask 值。默认值为077，则新建档案的对应权限为700。  
 
-下面2个设置不经常用
-deny_email_enable=YES/NO（NO）
-banned_email_file=/etc/vsftpd/banner_emails
+下面2个设置不经常用  
+deny_email_enable=YES/NO（NO）  
+banned_email_file=/etc/vsftpd/banner_emails  
 
 **（3）本地用户设置**
 local_enable=YES/NO（YES） // 本地用户登录是否开启
