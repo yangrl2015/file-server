@@ -2,6 +2,7 @@
 
 ## 1 vsftpd 文件服务器
 ###（1）配置文件说明
+
 **vsftpd.conf**
  Example config file /etc/vsftpd/vsftpd.conf
 **（1）默认配置**
